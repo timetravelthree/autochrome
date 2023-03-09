@@ -6,11 +6,7 @@ It does so by looking for the string "autochrome/\[XXXX\]" in the User-Agent hea
 
 # Installation
 
-1. `mkdir /tmp/burp-api`
-1. Run Burp.  Under Extender => APIs, click "Save interface files", and choose the `/tmp/burp-api` directory.
-1. `cp /tmp/burp-api/burp/*.java src/burp`
-1. `cd src`
-1. `javac burp/BurpExtender.java`
-1. `jar cf autochrome-useragenttag.jar burp/BurpExtender.class com/nccgroup/autochrome/useragenttag/*.class`
+1. `gradle build`
+1. The final JAR will be on "build/libs/"
 1. In Burp, go to Extender => Extensions.
 1. Select "Add". Select the JAR file and finish the wizard.
